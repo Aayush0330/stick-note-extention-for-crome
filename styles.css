@@ -1,16 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px; /* Set a larger width */
+  height: 400px; /* Set a larger height */
 }
 
 #note-container {
-    margin: 10px;
+  margin: 10px;
 }
 
 textarea {
-    width: 100%;
-    height: 60px;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  font-size: 14px;
 }
 
 button {
@@ -20,28 +24,32 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 #notes-list {
     margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 .note-item {
-    background: #f9f9a9;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 4px;
-    cursor: pointer;
+  background: #f9f9a9;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .sticky-note {
-    position: absolute;
-    background: yellow;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    z-index: 1000;
-    cursor: move;
-    transition: width 0.3s ease, height 0.3s ease; /* Smooth size change */
-
+  position: absolute;
+  background: yellow;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1000;
+  cursor: move;
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth size change */
 }
